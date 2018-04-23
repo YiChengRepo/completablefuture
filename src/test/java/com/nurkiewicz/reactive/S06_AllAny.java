@@ -34,6 +34,11 @@ public class S06_AllAny extends AbstractFuturesTest {
 				log.error("", e);
 			}
 		});
+
+		while(!allCompleted.isDone()) {
+			log.debug("doing something ...");
+		}
+		log.debug("end of func allOf");
 	}
 
 	@Test
