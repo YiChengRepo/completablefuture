@@ -71,7 +71,7 @@ public class TimeoutAsync {
     private void asyncFutureTimeout(int timeoutSecond, long processMillisecond1, long processMillisecond2) {
         final CompletableFuture<String> java = CompletableFuture.supplyAsync(() -> process(processMillisecond1));
         final CompletableFuture<String> java2 = CompletableFuture.supplyAsync(() -> process2(processMillisecond2));
-        final CompletableFuture<String> timeout = S09_Promises.timeoutAfter(Duration.ofSeconds(timeoutSecond));
+        final CompletableFuture<String> timeout = timeoutAfter(Duration.ofSeconds(timeoutSecond));
 
         final CompletableFuture<Object> firstCompleted =
                 CompletableFuture.anyOf(java,timeout, java2);
