@@ -1,5 +1,4 @@
 package com.nurkiewicz.reactive;
-
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -11,6 +10,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+
+//Author Yi Cheng
+//Email: i.albert.cheng@gmail.com
 
 public class TimeoutAsync {
 
